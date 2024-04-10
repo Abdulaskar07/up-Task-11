@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD or EVEN</title>
+    <Style>
+        .container{
+            margin: auto;
+            background-color: rgb(55, 6, 201);
+            color: white;
+            width: 20vw;
+            padding: 20px;
+        }
+        input{
+            border: none;
+            width: 19vw;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:large ;
+        }
+        #output{
+            width: 20vw;
+            height: 10vh;
+            background-color: white;
+            color: black;
+        }
+        button{
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+            font-size: medium;
+            margin: auto;
+
+            }
+
+    </Style>
+</head>
+<body>
+    <div class="container">
+        <h2>Find Odd Or Even Game</h2>
+        <input type="Text" placeholder="Enter the number" id="input">
+        <h3 id="output"></h3>
+        <button onclick="Find()">Find</button>
+    </div>
+    <script>
+        function Find(){
+            var input = parseInt(document.getElementById("input").value);
+            var output = document.getElementById("output");
+            if(input%2===0){
+                output.innerText = `The given number ${input} is Even`;
+            }else{
+                output.innerText = `The given number ${input} is Odd`;
+            }
+        }
+    </script>
+</body>
+</html>
